@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using gighub.Models;
@@ -8,18 +9,25 @@ namespace gighub.ViewModels
 {
     public class GigFormViewModel
     {
-        public string Venue { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
-        public byte Genre { get; set; }
-        public IEnumerable<Genre> Genres  { get; set; }
+        [Required] public string Venue { get; set; }
 
-        public DateTime DateTime
+        [Required]
+        [FutureDate]
+        public string Date { get; set; }
+
+        [Required]
+        [ValidTime]
+        public string Time { get; set; }
+
+        [Required] public byte Genre { get; set; }
+
+        public IEnumerable<Genre> Genres { get; set; }
+
+        public DateTime GetDateTime()
         {
-            get
-            {
-                return DateTime.Parse(string.Format("{0} {1}", Date, Time));
-            }
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
+
         }
+
     }
 }
