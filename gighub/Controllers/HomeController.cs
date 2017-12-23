@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using gighub.Models;
+using gighub.ViewModels;
 
 namespace gighub.Controllers
 {
@@ -23,7 +23,13 @@ namespace gighub.Controllers
                 .Include(g => g.Genre)
                 .Where(g => g.DateTime > DateTime.Now);
 
-            return View(upcommingGigs);
+            var viewModel = new GigsViewModel
+            {
+                UpcomingGigs = upcommingGigs,
+                ShowActions = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()
