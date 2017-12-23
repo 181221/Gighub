@@ -65,11 +65,12 @@ body > div.navbar.navbar-inverse.navbar-fixed-top {
     font-size: 20px;
     padding: 6px 12px;
 }
-.gigs > li .details {
-    position: absolute;
-    top: 0;
-    left: 70px;
-}
+    .gigs > li .details {
+        position: absolute;
+        top: 0;
+        width: 25%;
+        left: 70px;
+    }
 .gigs > li .details .artist {
     font-weight: bold;
     display: block;
