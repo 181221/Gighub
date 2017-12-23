@@ -26,10 +26,11 @@ namespace gighub.Controllers
             var viewModel = new GigsViewModel
             {
                 UpcomingGigs = upcommingGigs,
-                ShowActions = User.Identity.IsAuthenticated
+                ShowActions = User.Identity.IsAuthenticated,
+                Heading = "Gigs I'm Attending"
             };
 
-            return View(viewModel);
+            return View("Gigs",viewModel);
         }
 
         public ActionResult About()
