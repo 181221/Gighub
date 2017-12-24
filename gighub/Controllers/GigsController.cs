@@ -55,6 +55,7 @@ namespace gighub.Controllers
             var gig = _context.Gigs.Single((g => g.Id == id && g.ArtistId == userId));
             var viewModel = new GigFormViewModel
             {
+                Id = gig.GenreId,
                 Heading = "Edit a Gig",
                 Genres = _context.Genres.ToList(),
                 Date = gig.DateTime.ToString("d MMM yyyy"),
