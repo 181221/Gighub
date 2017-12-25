@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
 using gighub.Dtos;
 using gighub.Models;
 using Microsoft.AspNet.Identity;
 
-namespace gighub.Controllers
+namespace gighub.Controllers.Api
 {
     [Authorize]
     public class AttendencesController : ApiController
