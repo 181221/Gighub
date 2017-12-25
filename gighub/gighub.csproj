@@ -200,6 +200,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GigsController.cs" />
     <Compile Include="Controllers\AttendencesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
@@ -241,6 +242,10 @@
     <Compile Include="Migrations\201712231711184_fuckedup.cs" />
     <Compile Include="Migrations\201712231711184_fuckedup.Designer.cs">
       <DependentUpon>201712231711184_fuckedup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712251021257_AddIsCanceledToGig.cs" />
+    <Compile Include="Migrations\201712251021257_AddIsCanceledToGig.Designer.cs">
+      <DependentUpon>201712251021257_AddIsCanceledToGig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -366,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712231711184_fuckedup.resx">
       <DependentUpon>201712231711184_fuckedup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712251021257_AddIsCanceledToGig.resx">
+      <DependentUpon>201712251021257_AddIsCanceledToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
